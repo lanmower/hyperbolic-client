@@ -1,0 +1,25 @@
+{
+  "name": "hyperbolic-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "nexe -i index.js -o hyperbolic-gate.exe && npm run buildlauncher && copy .\\resources\\bin\\hyperbolic-gate-launcher.exe .\\",
+    "buildlauncher": "msbuild launcher/launcher.csproj",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@hyperswarm/dht": "^5.0.24",
+    "hi-base32": "^0.5.1",
+    "http-proxy": "^1.18.1",
+    "hypercore-crypto": "^3.2.1",
+    "node-notifier": "^10.0.1",
+    "pump": "^3.0.0",
+    "sni": "^1.0.0",
+    "systray": "^1.0.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
