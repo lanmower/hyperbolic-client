@@ -2,8 +2,11 @@ const sni = require("sni");
 const net = require("net");
 const b32 = require("hi-base32");
 const DHT = require("@hyperswarm/dht");
-const pump = require('pump')
-
+const pump = require('pump');
+const node = new DHT();
+const fs = require('fs');
+const http = require('http');
+const httpProxy = require('http-proxy');
 
 const path =  require("path");
 const { WindowsToaster } = require("node-notifier");
